@@ -1,5 +1,5 @@
 public class Sorts {
-  public static void selectionsort(int[] ary) {
+  public static void selectionSort(int[] ary) {
     for (int idx = 0; idx < ary.length; idx++) {
       int place = idx; //Tells you where to replace the original value
       int og = ary[idx]; //Saves the original value for use later
