@@ -16,16 +16,16 @@ public class Sorts {
     }
   }
   public static void bubbleSort(int[] ary) {
-    for (int size = ary.length; size > 0; size --) {
+    for (int size = ary.length; size > 0; size --) { //Changes the size after going through an entire row so you don't have to go all the way to the end every time
       for (int idx = 1; idx < size; idx++) {
-        if (ary[idx - 1] > ary[idx]) {
+        if (ary[idx - 1] > ary[idx]) { //Compares the two adjacent values
           int value1 = ary[idx - 1];
           int value2 = ary[idx];
           ary[idx - 1] = value2;
-          ary[idx] = value1;
+          ary[idx] = value1; //Swaps places
         }
       }
-      System.out.println(Arrays.toString(ary));
+      System.out.println(Arrays.toString(ary)); //Prints after it completes each complete pass to see if it works
     }
   }
 }
