@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Sorts {
   public static void selectionSort(int[] ary) {
     for (int idx = 0; idx < ary.length; idx++) {
@@ -12,6 +13,19 @@ public class Sorts {
       }
       ary[idx] = small;
       ary[place] = og; //Swaps places
+    }
+  }
+  public static void bubbleSort(int[] ary) {
+    for (int size = ary.length; size > 0; size --) {
+      for (int idx = 1; idx < size; idx++) {
+        if (ary[idx - 1] > ary[idx]) {
+          int value1 = ary[idx - 1];
+          int value2 = ary[idx];
+          ary[idx - 1] = value2;
+          ary[idx] = value1;
+        }
+      }
+      System.out.println(Arrays.toString(ary));
     }
   }
 }
