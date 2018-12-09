@@ -17,12 +17,13 @@ public class Driver {
     int[] ary4 = {234762837, 23454, 345, 17, 853533535, -123};
     System.out.println(printArray(ary));
     Sorts.selectionSort(ary);
-    System.out.println(printArray(ary));
+    System.out.println();
     System.out.println(printArray(ary2));
     Sorts.selectionSort(ary2);
-    System.out.println(printArray(ary2));
+    System.out.println();
     System.out.println(printArray(ary3));
     Sorts.bubbleSort(ary3);
+    System.out.println();
     System.out.println(printArray(ary4));
     Sorts.bubbleSort(ary4);
   }

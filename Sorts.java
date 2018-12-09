@@ -13,6 +13,7 @@ public class Sorts {
       }
       ary[idx] = small;
       ary[place] = og; //Swaps places
+      System.out.println(Arrays.toString(ary));
     }
   }
   public static void bubbleSort(int[] ary) {
