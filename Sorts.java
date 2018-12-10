@@ -29,4 +29,20 @@ public class Sorts {
 //      System.out.println(Arrays.toString(ary)); //Prints after it completes each complete pass to see if it works
     }
   }
+  public static void insertionSort(int[] ary) {
+    int current;
+    int curIdx;
+    for (int idx = 1; idx < ary.length; idx++) {
+      current = ary[idx];
+      for (int x = idx; x < 0; x--) {
+        if (ary[x] < current) {
+          curIdx = x;
+          break;
+        }
+      }
+      for (int y = curIdx + 1; y < idx; y++) {
+        int value = ary[y + 1];
+      }
+    }
+  }
 }
