@@ -35,12 +35,12 @@ public class Sorts {
     for (int idx = 1; idx < ary.length; idx++) {
       current = ary[idx]; // Storing value for later to move
       curIdx = idx - 1;
-      while (curIdx > -1 && ary[curIdx] > current) {
-        ary[curIdx + 1] = ary[idx]; // Shifting values over
+      while (curIdx >= 0 && ary[curIdx] > current) {
+        ary[curIdx + 1] = ary[curIdx]; // Shifting values over
         curIdx--;
         }
         ary[curIdx + 1] = current;
-        System.out.println(Arrays.toString(ary));
+    //    System.out.println(Arrays.toString(ary));
       }
     }
   }
