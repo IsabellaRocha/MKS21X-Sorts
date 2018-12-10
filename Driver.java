@@ -1,30 +1,35 @@
-public class Driver {
-  public static String printArray(int[] arr) {
-    String output = "[";
-    for (int idx = 0; idx < arr.length; idx ++) {
-      output += arr[idx];
-      if (idx < arr.length - 1) {
-        output += ", ";
+import java.util.Arrays;
+public class Driver{
+
+  public static void main(String[]artie){
+
+    int[] randish = new int[Integer.parseInt(artie[0])];
+    for(int i = 0 ; i < randish.length; i++){
+      randish[i] =(int)(Math.random()*10000);
+    }
+
+    if(artie[1].equals("selection")){
+      Sorts.selectionSort(randish);
+    }
+    if(artie[1].equals("bubble")){
+      Sorts.bubbleSort(randish);
+    }
+    if(artie[1].equals("test")){
+      int[] randish2 = Arrays.copyOf(randish,randish.length);
+      int[] randish3 = Arrays.copyOf(randish,randish.length);
+      Sorts.selectionSort(randish);
+      Sorts.bubbleSort(randish2);
+      Arrays.sort(randish3);
+      if( Arrays.equals(randish,randish3)){
+        System.out.println("Selection Correct!");
+      }else{
+       System.out.println("Selection BROKEN!!!!");
+      }
+      if( Arrays.equals(randish2,randish3)){
+        System.out.println("Bubble Correct!");
+      }else{
+       System.out.println("Bubble BROKEN!!!!");
       }
     }
-    output += "]";
-    return output;
-  }
-  public static void main(String[] args) {
-    int[] ary = {1,7,43,7,56,3,8,25345,8};
-    int[] ary2 = {234762837, 23454, 345, 17, 853533535, -123};
-    int[] ary3 = {1,7,43,7,56,3,8,25345,8};
-    int[] ary4 = {234762837, 23454, 345, 17, 853533535, -123};
-    System.out.println(printArray(ary));
-    Sorts.selectionSort(ary);
-    System.out.println();
-    System.out.println(printArray(ary2));
-    Sorts.selectionSort(ary2);
-    System.out.println();
-    System.out.println(printArray(ary3));
-    Sorts.bubbleSort(ary3);
-    System.out.println();
-    System.out.println(printArray(ary4));
-    Sorts.bubbleSort(ary4);
   }
 }

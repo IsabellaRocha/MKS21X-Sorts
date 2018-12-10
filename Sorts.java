@@ -13,7 +13,7 @@ public class Sorts {
       }
       ary[idx] = small;
       ary[place] = og; //Swaps places
-      System.out.println(Arrays.toString(ary));
+  //    System.out.println(Arrays.toString(ary));
     }
   }
   public static void bubbleSort(int[] ary) {
@@ -26,7 +26,7 @@ public class Sorts {
           ary[idx] = value1; //Swaps places
         }
       }
-      System.out.println(Arrays.toString(ary)); //Prints after it completes each complete pass to see if it works
+//      System.out.println(Arrays.toString(ary)); //Prints after it completes each complete pass to see if it works
     }
   }
 }
