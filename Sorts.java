@@ -33,16 +33,14 @@ public class Sorts {
     int current;
     int curIdx;
     for (int idx = 1; idx < ary.length; idx++) {
-      current = ary[idx];
-      for (int x = idx; x < 0; x--) {
-        if (ary[x] < current) {
-          curIdx = x;
-          break;
+      current = ary[idx]; // Storing value for later to move
+      curIdx = idx - 1;
+      while (curIdx > -1 && ary[curIdx] > current) {
+        ary[curIdx + 1] = ary[idx]; // Shifting values over
+        curIdx--;
         }
-      }
-      for (int y = curIdx + 1; y < idx; y++) {
-        int value = ary[y + 1];
+        ary[curIdx + 1] = current;
+        System.out.println(Arrays.toString(ary));
       }
     }
   }
-}
