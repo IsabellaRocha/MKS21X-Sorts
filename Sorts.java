@@ -17,17 +17,20 @@ public class Sorts {
     }
   }
   public static void bubbleSort(int[] ary) {
-    for (int size = ary.length; size > 0; size --) { //Changes the size after going through an entire row so you don't have to go all the way to the end every time
-      for (int idx = 1; idx < size; idx++) {
+    boolean go = false;
+    while (!go) {
+      go = true;
+      for (int idx = 1; idx < ary.length; idx++) {
         if (ary[idx - 1] > ary[idx]) { //Compares the two adjacent values
           int value1 = ary[idx - 1];
           int value2 = ary[idx];
           ary[idx - 1] = value2;
           ary[idx] = value1; //Swaps places
+          go = false;
         }
       }
-//      System.out.println(Arrays.toString(ary)); //Prints after it completes each complete pass to see if it works
     }
+//      System.out.println(Arrays.toString(ary));
   }
   public static void insertionSort(int[] ary) {
     for (int idx = 1; idx < ary.length; idx++) {
@@ -36,9 +39,9 @@ public class Sorts {
       while (curIdx >= 0 && ary[curIdx] > current) {
         ary[curIdx + 1] = ary[curIdx]; // Shifting values over
         curIdx--;
-        }
-        ary[curIdx + 1] = current;
-    //    System.out.println(Arrays.toString(ary));
       }
+      ary[curIdx + 1] = current;
+    //  System.out.println(Arrays.toString(ary));
     }
   }
+}
