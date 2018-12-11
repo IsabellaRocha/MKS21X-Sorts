@@ -5,7 +5,8 @@ public class Driver{
 
     int[] randish = new int[Integer.parseInt(artie[0])];
     for(int i = 0 ; i < randish.length; i++){
-      randish[i] =(int)(Math.random()*10000);
+    //  randish[i] =(int)(Math.random()*10000);
+      randish[i] = 0;
     }
 
     if(artie[1].equals("selection")){
@@ -20,19 +21,26 @@ public class Driver{
     if(artie[1].equals("test")){
       int[] randish2 = Arrays.copyOf(randish,randish.length);
       int[] randish3 = Arrays.copyOf(randish,randish.length);
+      int[] randish4 = Arrays.copyOf(randish,randish.length);
       Sorts.selectionSort(randish);
       Sorts.bubbleSort(randish2);
-      Arrays.sort(randish3);
-      if( Arrays.equals(randish,randish3)){
+      Sorts.insertionSort(randish3);
+      Arrays.sort(randish4);
+      if( Arrays.equals(randish,randish4)){
         System.out.println("Selection Correct!");
       }else{
        System.out.println("Selection BROKEN!!!!");
       }
-      if( Arrays.equals(randish2,randish3)){
+      if( Arrays.equals(randish2,randish4)){
         System.out.println("Bubble Correct!");
       }else{
        System.out.println("Bubble BROKEN!!!!");
       }
+      if( Arrays.equals(randish3,randish4)){
+        System.out.println("Insertion Correct!");
+      }else{
+       System.out.println("Insertion BROKEN!!!!");
+     }
     }
   }
 }
