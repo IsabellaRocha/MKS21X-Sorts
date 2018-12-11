@@ -30,11 +30,9 @@ public class Sorts {
     }
   }
   public static void insertionSort(int[] ary) {
-    int current;
-    int curIdx;
     for (int idx = 1; idx < ary.length; idx++) {
-      current = ary[idx]; // Storing value for later to move
-      curIdx = idx - 1;
+      int current = ary[idx]; // Storing value for later to move
+      int curIdx = idx - 1;
       while (curIdx >= 0 && ary[curIdx] > current) {
         ary[curIdx + 1] = ary[curIdx]; // Shifting values over
         curIdx--;
